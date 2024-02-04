@@ -1,0 +1,147 @@
+.container {
+  // width: 1720px;
+  display: flex;
+  box-sizing: border-box;
+  background: #FFFFFF;
+
+  .content {
+    padding: 24px;
+    width: 1480px;
+    box-sizing: border-box;
+    border: 1px solid #DADFE6;
+  
+    .search {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    
+      .btn {
+        width: 80px;
+        height: 36px;
+        background: #BF832E;
+        border-radius: 3px;
+      }
+    }
+  
+    .card {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+  
+      .card-item {
+        box-sizing: border-box;
+        width: 340px;
+        height: 224px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 20px 0px rgba(32,45,64,0.1);
+        border-radius: 6px;
+        border: 1px solid #E6E9ED;
+        margin-bottom: 24px;
+        margin-right: 24px;
+    
+        :global {
+          .ant-card-body {
+            padding: 12px;
+          }
+        }
+    
+        .card-item-img {
+          margin-bottom: 12px;
+    
+          img {
+            width: 316px;
+            height: 160px;
+            background: #F7F8FA;
+          }
+        }
+    
+        .card-item-content {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .card-item:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+  
+  .info {
+    width: 240px;
+    height: 100vh;
+    padding: 0 16px;
+    border: 1px solid #DADFE6;
+    border-left: none;
+  
+    &-title {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+  
+      &-tip {
+        height: 28px;
+        font-size: 16px;
+        font-family: MicrosoftYaHei;
+        color: #333333;
+        line-height: 28px;
+      }
+  
+      &-amount {
+        font-size: 24px;
+        font-family: MicrosoftYaHei, MicrosoftYaHei;
+        font-weight: bold;
+        color: #333333;
+        line-height: 28px;
+      }
+    }
+
+    &-health {
+      margin-bottom: 24px;
+
+      &-title {
+        height: 28px;
+        font-size: 16px;
+        font-family: MicrosoftYaHei;
+        color: #666666;
+        line-height: 28px;
+        margin-bottom: 8px;
+      }
+
+      &-process {
+        margin-bottom: 24px;
+
+        .process-no {
+          display: flex;
+          justify-content: space-between;
+          height: 20px;
+          font-size: 14px;
+          font-family: MicrosoftYaHei, MicrosoftYaHei;
+          font-weight: bold;
+          color: #333333;
+          line-height: 20px;
+        }
+
+        .process-bar {
+          width: 210px;
+          height: 8px;
+          display: flex;
+
+          .process-bar-ok {
+            width: 124px;
+            height: 8px;
+            background: #24B87A;
+          }
+          .process-bar-notok {
+            width: 86px;
+            height: 8px;
+            background: #E62828;
+          }
+        }
+      } 
+    }
+  }
+}

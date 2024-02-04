@@ -1,0 +1,177 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "700853",
+      "name": "头像",
+      "font_class": "touxiang",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    },
+    {
+      "icon_id": "755534",
+      "name": "单箭头直线",
+      "font_class": "one-line-arrow",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "755561",
+      "name": "双箭头直线",
+      "font_class": "xie-jiantou",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "755616",
+      "name": "直线",
+      "font_class": "line",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "1335516",
+      "name": "圆柱体",
+      "font_class": "icon-yuanzhuti",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "4766902",
+      "name": "cloud",
+      "font_class": "cloud",
+      "unicode": "e7d9",
+      "unicode_decimal": 59353
+    },
+    {
+      "icon_id": "5127358",
+      "name": "hexagon",
+      "font_class": "hexagon",
+      "unicode": "e7a0",
+      "unicode_decimal": 59296
+    },
+    {
+      "icon_id": "8952787",
+      "name": "diamond",
+      "font_class": "diamond",
+      "unicode": "e801",
+      "unicode_decimal": 59393
+    },
+    {
+      "icon_id": "10147101",
+      "name": "circle",
+      "font_class": "circle",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "10907451",
+      "name": "square",
+      "font_class": "square",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "11864342",
+      "name": "container",
+      "font_class": "container",
+      "unicode": "e6e8",
+      "unicode_decimal": 59112
+    },
+    {
+      "icon_id": "12309821",
+      "name": "cube",
+      "font_class": "cube",
+      "unicode": "e812",
+      "unicode_decimal": 59410
+    },
+    {
+      "icon_id": "12310332",
+      "name": "rectangle",
+      "font_class": "rectangle",
+      "unicode": "e88e",
+      "unicode_decimal": 59534
+    },
+    {
+      "icon_id": "13366433",
+      "name": "dashed-line",
+      "font_class": "dashed-line",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "14135939",
+      "name": "拉伸",
+      "font_class": "lashen",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "14341946",
+      "name": "ellipse",
+      "font_class": "ellipse",
+      "unicode": "e7b8",
+      "unicode_decimal": 59320
+    },
+    {
+      "icon_id": "14342013",
+      "name": "right-triangle",
+      "font_class": "right-triangle",
+      "unicode": "e7c4",
+      "unicode_decimal": 59332
+    },
+    {
+      "icon_id": "15424772",
+      "name": "审批流程设置 base/permission/approveProcess",
+      "font_class": "basepermissionapproveProcess",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "17950733",
+      "name": "toolbar_icon_jiantou",
+      "font_class": "toolbar_icon_jiantou",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "21096735",
+      "name": "line-dotted",
+      "font_class": "line-dotted",
+      "unicode": "eccc",
+      "unicode_decimal": 60620
+    },
+    {
+      "icon_id": "23958757",
+      "name": "TiDB",
+      "font_class": "TiDB",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "28542439",
+      "name": "文字",
+      "font_class": "wenzi",
+      "unicode": "e9f5",
+      "unicode_decimal": 59893
+    },
+    {
+      "icon_id": "35854169",
+      "name": "trapezoid",
+      "font_class": "trapezoid",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "38736572",
+      "name": "textedit_curve",
+      "font_class": "textedit_curve",
+      "unicode": "e838",
+      "unicode_decimal": 59448
+    }
+  ]
+}
