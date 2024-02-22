@@ -48,15 +48,58 @@ const cardList = [
   },
 ]
 
-const ServiceArchitecture = () => {
+const contentList = [
+  {
+    id: "xx01",
+    name: "Ai服务地铁图",
+    number: 8
+  },
+  {
+    id: "xx02",
+    name: "登陆链路",
+    number: 7
+  },
+  {
+    id: "xx03",
+    name: "登陆链路",
+    number: 8
+  },
+  {
+    id: "xx04",
+    name: "登陆链路",
+    number: 6
+  },
+  {
+    id: "xx05",
+    name: "xxx链路",
+    number: 7
+  },
+  {
+    id: "xx06",
+    name: "xx链路",
+    number: 8
+  },{
+    id: "xx07",
+    name: "xxxxx图",
+    number: 6
+  },
+  {
+    id: "xx08",
+    name: "登陆链路",
+    number: 7
+  },
+]
+
+const LayoutSquare = () => {
   const navigate = useNavigate()
   const onSearch = (value: any, _e: any, info: any) => {
     console.log("value", value)
   }
 
   const onAddDiagram = () => {
-    // navigate("/home/serviceArchitecture/addDiagrams")
-    window.open("/graph", "_blank");
+    // navigate("/home/layoutSquare/addDiagrams")
+    // window.open("/graph", "_blank");
+    window.open("http://localhost:8080/", "_blank")
   }
 
   return (
@@ -115,7 +158,25 @@ const ServiceArchitecture = () => {
               </div>
             </div>
             <div className={classNames("info-error")}>
-              <div></div>
+              <div className={classNames("info-error-title")}>异常清单</div>
+              <div className={classNames("info-error-list")}>
+                <div className={classNames("list-title")}>
+                  <div className={classNames("list-title-left")}>链路名称</div>
+                  <div className={classNames("list-title-left")}>告警数量</div>
+                </div>
+                <div className={classNames("list-content")}>
+                  {
+                    contentList.map((content:any) => {
+                      return (
+                        <div className={classNames("list-content-item")} key={content.id}>
+                          <div className={classNames("content-item-left")}>{content.name}</div>
+                          <div className={classNames("content-item-right")}>{content.number}</div>
+                        </div>
+                      )
+                    })
+                  }
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -124,4 +185,4 @@ const ServiceArchitecture = () => {
   );
 };
 
-export default ServiceArchitecture;
+export default LayoutSquare;

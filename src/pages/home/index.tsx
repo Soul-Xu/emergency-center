@@ -1,8 +1,14 @@
-import React from 'react';
-// import CustomLayout from '@/layout/CustomLayout'
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import CustomLayout from '../../layout/CustomLayout';
 
 const Home = () => {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    navigate('/home/layoutSquare')
+  }, [])
+
   return (
     <div>
       <CustomLayout>

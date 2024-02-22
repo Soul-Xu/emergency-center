@@ -2,21 +2,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/home/index';
-import ServiceArchitecture from './pages/serviceArchitecture';
-import KeyLinks from './pages/keyLinks';
-import Diagrams from './pages/diagrams';
+import LayoutSquare from './pages/layoutSquare';
+import KeyLinks from './pages/objectManage';
 
 const App = () => {
   return (
     <Router>
       <Routes>
         {/* 首页路由 */}
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/graph" element={<Diagrams />} />
+        <Route path="/" element={<LayoutSquare />} />
+        <Route path="/home" element={<LayoutSquare />} />
         {/* 其他页面路由 */}
-        <Route path="/home/serviceArchitecture" element={<ServiceArchitecture />} />
-        <Route path="/linkManage/keyLinks" element={<KeyLinks />} />
+        <Route path="/home/layoutSquare" element={<LayoutSquare />} />
+        <Route path="/systemSetting/objectManage" element={<KeyLinks />} />
       </Routes>
     </Router>
   );

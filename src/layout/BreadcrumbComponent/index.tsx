@@ -18,16 +18,16 @@ const BreadcrumbComponent = (props: Props) => {
     },
     // eslint-disable
     {
-      key: 'serviceArchitecture',
-      title: '服务架构总览',
+      key: 'layoutSquare',
+      title: '架构图广场',
     },
     {
-      key: 'linkManage',
-      title: '链路管理',
+      key: 'systemSetting',
+      title: '对象管理',
     },
     {
-      key: 'keyLinks',
-      title: '关键链路总览',
+      key: 'objectManage',
+      title: '菜单内容配置',
     },
   ]
 

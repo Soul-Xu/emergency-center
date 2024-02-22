@@ -1,25 +1,18 @@
-import React, { useState, ReactNode } from 'react';
+import React, { useEffect, useState, ReactNode } from 'react';
 import {
   HomeOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
   VideoCameraOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import BreadcrumbComponent from '../BreadcrumbComponent';
-import BreadcrumbTabs from '../BreadcrumbTab';
 // @ts-ignore
 import styles from "./index.module.scss";
 import classnames from "classnames/bind";
 const classNames = classnames.bind(styles);
 
 const { Header, Sider, Content } = Layout;
-
-/** images */
-// import ImgLogo from '@/src/static/images/siderbar_logo.png'
 
 const menuItems = [
   {
@@ -28,25 +21,36 @@ const menuItems = [
     label: '首页',
     children: [
       {
-        key: 'serviceArchitecture',
+        key: 'layoutSquare',
         icon: '',
-        label: '服务架构总览',
+        label: '架构图广场',
       }
     ]
   },
   {
-    key: 'linkManage',
+    key: 'systemSetting',
     icon: <VideoCameraOutlined />,
-    label: '链路管理',
+    label: '系统设置',
     children: [
       {
-        key: 'keyLinks',
+        key: 'objectManage',
         icon: '',
-        label: '关键链路总览',
+        label: '对象管理',
       }
     ]
   },
 ]
+
+
+const labelMap:any = {};
+
+menuItems.forEach(item => {
+  if (item.children) {
+    item.children.forEach(child => {
+      labelMap[child.key] = child.label;
+    });
+  }
+});
 
 interface CustomLayoutProps {
   children: ReactNode;
@@ -56,6 +60,7 @@ interface CustomLayoutProps {
 const CustomLayout = ({ children }: CustomLayoutProps) => {
   const navigate = useNavigate(); 
   const [collapsed, setCollapsed] = useState(false);
+  const [seleteLabel, setSelectLabel] = useState('');
   const [selectMenu, setSelectMenu] = useState<any>(null)
   const [selectedSubMenu, setSelectedSubMenu] = useState<any>(null);
   const {
@@ -65,20 +70,6 @@ const CustomLayout = ({ children }: CustomLayoutProps) => {
   const onChangeMenu = (menuItem: any) => {
     setSelectMenu(menuItem)
 
-    // setSelectMenu((prevSelectMenu:any) => {
-    //   // 使用回调函数确保获取到正确的 prevSelectMenu
-    //   const updatedSelectMenu = { ...prevSelectMenu, ...menuItem };
-  
-    //   // 点击面包屑时进行页面导航
-    //   if (updatedSelectMenu?.keyPath && updatedSelectMenu.keyPath.length > 0) {
-    //     const reversedPath = [...updatedSelectMenu.keyPath].reverse();
-    //     const path = `/${reversedPath.join('/')}`;
-    //     navigate(path);  // 使用 useNavigate 进行导航
-    //   }
-  
-    //   return updatedSelectMenu;
-    // });
-
     // 点击面包屑时进行页面导航
     // eslint-disable
     if (menuItem?.keyPath && menuItem.keyPath.length > 0) {
@@ -86,6 +77,13 @@ const CustomLayout = ({ children }: CustomLayoutProps) => {
       navigate(path);  // 使用 useNavigate 进行导航
     }
   }
+
+  useEffect(() => {
+    if (selectMenu) {
+      const selectLabel = labelMap[selectMenu.key];
+      setSelectLabel(selectLabel);
+    }
+  }, [selectMenu])
 
   return (
     <Layout style={{ width: "100vw" }}>
@@ -114,6 +112,7 @@ const CustomLayout = ({ children }: CustomLayoutProps) => {
               // height: 64,
             }}
           />
+          <div className={classNames("label")}>{seleteLabel}</div>
         </Header>
         <Content
           style={{
