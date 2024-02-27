@@ -36,7 +36,12 @@ const menuItems = [
         key: 'objectManage',
         icon: '',
         label: '对象管理',
-      }
+      },     
+      {
+        key: 'relationManage',
+        icon: '',
+        label: '关系管理',
+      },
     ]
   },
 ]
