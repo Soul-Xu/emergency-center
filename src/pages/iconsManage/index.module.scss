@@ -1,0 +1,116 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 64px);
+
+  .content {
+    display: flex;
+    margin-top: 24px;
+    margin-left: 24px;
+
+    &-left {
+      width: 320px;
+      height: calc(100vh - 128px);
+      border: 1px solid #ccc;
+      background-color: #fff;
+      margin-right: 8px;
+
+      &-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        border-bottom: 1px solid #ccc;
+
+        .left-context {
+          font-size: 18px;
+          margin-right: 8px;
+        }
+
+        .left-btn {
+          height: 30px;
+          margin-right: 8px;
+        }
+      }
+
+      &-list {
+        height: 100%;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+
+        .left-list-item {
+          padding: 20px;
+          font-size: 16px;
+          line-height: 20px;
+          height: 30px;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid #ececec;
+      
+          .list-item-icon {
+            // color: #fff;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    &-right {
+      width: calc(100vw - 454px);
+      height: calc(100vh - 128px);
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 16px;
+
+      .content-right-search {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .content-right-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 16px;
+        overflow: auto;
+
+        .right-list-item {
+          // width: calc((100vw - 774px) / 4); 
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-right: 16px;
+          margin-bottom: 16px;
+
+          .list-item-image {
+            img {
+              width: 80px;
+              height: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.right-btns {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  .btns-left {
+    &-btn {
+      margin-right: 10px;
+    }
+  }
+
+  .btns-right {
+    
+  }
+}

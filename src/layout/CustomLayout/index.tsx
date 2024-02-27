@@ -42,6 +42,11 @@ const menuItems = [
         icon: '',
         label: '关系管理',
       },
+      {
+        key: 'iconsManage',
+        icon: '',
+        label: '图标管理',
+      },
     ]
   },
 ]

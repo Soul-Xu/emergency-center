@@ -5,6 +5,7 @@ import Home from './pages/home/index';
 import LayoutSquare from './pages/layoutSquare';
 import ObjectManage from './pages/objectManage';
 import RelationManage from './pages/relationManage';
+import IconsManage from './pages/iconsManage';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/home/layoutSquare" element={<LayoutSquare />} />
         <Route path="/systemSetting/objectManage" element={<ObjectManage />} />
         <Route path="/systemSetting/relationManage" element={<RelationManage />} />
+        <Route path="/systemSetting/iconsManage" element={<IconsManage />} />
       </Routes>
     </Router>
   );

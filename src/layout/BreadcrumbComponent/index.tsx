@@ -26,12 +26,16 @@ const BreadcrumbComponent = (props: Props) => {
       title: '菜单内容配置',
     },
     {
-      key: 'systemSetting',
-      title: '菜单内容配置',
-    },
-    {
       key: 'objectManage',
       title: '对象管理',
+    },
+    {
+      key: 'relationManage',
+      title: '关系管理',
+    },
+    {
+      key: 'iconsManage',
+      title: '图标管理',
     },
   ]
 
