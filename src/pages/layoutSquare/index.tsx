@@ -97,9 +97,15 @@ const LayoutSquare = () => {
   }
 
   const onAddDiagram = () => {
-    // navigate("/home/layoutSquare/addDiagrams")
-    // window.open("/graph", "_blank");
     window.open("http://localhost:8080/", "_blank")
+  }
+
+  const onCheck = (id: string) => {
+    navigate(`http://localhost:8080/diagram/${id}?type='check'`)
+  }
+
+  const onEditor = (id: string) => {
+    navigate(`http://localhost:8080/diagram/${id}type='editor`)
   }
 
   return (
@@ -122,18 +128,21 @@ const LayoutSquare = () => {
               {
                 cardList.map((card: any) => {
                   return (
-                    // eslint-disablep
-                    <Card key={card?.id} bordered={false} className={classNames("card-item")}>
-                      <div>
-                        <div className={classNames("card-item-img")}>
-                          <img src={(card?.imgUrl)} alt={card?.title}/>
-                        </div>
-                        <div className={classNames("card-item-content")}>
-                          <span>{card?.title}</span>
-                          <span>{card?.createAt}</span>
-                        </div>
+                    <Card key={card.id} bordered={false} className={classNames("card-item")}>
+                    <div>
+                      <div className={classNames("card-item-img")}>
+                        <img src={card.imgUrl} alt={card.title}/>
                       </div>
-                    </Card>
+                      <div className={classNames("card-item-content")}>
+                        <span>{card.title}</span>
+                        <span>{card.createAt}</span>
+                      </div>
+                      <div className={classNames("card-hover")}>
+                        <Button onClick={() => onCheck(card.id)} className={classNames("card-hover-button")} size="small">查看</Button>
+                        <Button onClick={() => onEditor(card.id)} className={classNames("card-hover-button")} size="small">编辑</Button>
+                      </div>
+                    </div>
+                  </Card>
                   )
                 })
               }
